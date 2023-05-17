@@ -7,9 +7,9 @@
     <header class="py-4 shadow-sm bg-pink-100 lg:bg-white">
         <div class="container flex items-center justify-between">
             <!-- logo -->
-            <a href="#" class="block w-32">
+            <RouterLink to="/" class="block w-32">
                 <img src="/images/logo.svg" alt="logo" class="w-full">
-            </a>
+            </RouterLink>
             <!-- logo end -->
 
             <!-- searchbar -->
@@ -33,8 +33,8 @@
 
             <!-- navicons -->
             <div class="space-x-4 flex items-center">
-                <a href="wishlist.html"
-                   class="flex flex-col items-center justify-center text-center text-gray-700 hover:text-primary transition relative">
+                <RouterLink to="/wishlist"
+                            class="flex flex-col items-center justify-center text-center text-gray-700 hover:text-primary transition relative">
                     <span class="absolute -right-0 -top-2 w-5 h-5 rounded-full flex items-center justify-center bg-primary text-white text-xs">5</span>
                     <div class="text-2xl">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -44,9 +44,9 @@
                         </svg>
                     </div>
                     <div class="text-xs leading-3">Wish List</div>
-                </a>
+                </RouterLink>
                 <RouterLink to="/cart"
-                   class="lg:flex flex-col items-center justify-center text-center text-gray-700 hover:text-primary transition hidden relative">
+                            class="lg:flex flex-col items-center justify-center text-center text-gray-700 hover:text-primary transition hidden relative">
                     <span class="absolute -right-3 -top-2 w-5 h-5 rounded-full flex items-center justify-center bg-primary text-white text-xs">3</span>
                     <div class="text-2xl">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -57,8 +57,8 @@
                     </div>
                     <div class="text-xs leading-3">Cart</div>
                 </RouterLink>
-                <RouterLink to="/login"
-                   class="flex flex-col items-center justify-center text-center text-gray-700 hover:text-primary transition">
+                <RouterLink to="/account"
+                            class="flex flex-col items-center justify-center text-center text-gray-700 hover:text-primary transition">
                     <div class="text-2xl">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                              stroke="currentColor" class="w-6 h-6">
@@ -89,10 +89,57 @@
 
                     <div class="absolute left-0 top-full w-full bg-white shadow-md py-3 invisible opacity-0 group-hover:opacity-100 group-hover:visible transition duration-300 z-50 divide-y divide-gray-300 divide-dashed">
                         <!-- single category -->
-                        <a href="#" class="px-6 py-3 flex items-center hover:bg-gray-100 transition">
-                            <img src="images/icons/bed.svg" class="w-5 h-5 object-contain">
-                            <span class="ml-6 text-gray-600 text-sm">Bedroom</span>
-                        </a>
+                        <div class="relative hover-active">
+                            <!-- If sub menu -->
+                            <span class="absolute right-2 top-3.5">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                     stroke-width="1.5" stroke="currentColor" class="w-4 h-4 text-gray-400">
+                                  <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/>
+                                </svg>
+                            </span>
+                            <!-- Menu -->
+                            <a href="#" class="px-6 py-3 flex items-center hover:bg-gray-100 transition">
+                                <img src="images/icons/bed.svg" class="w-5 h-5 object-contain">
+                                <span class="ml-6 text-gray-600 text-sm">Bedroom</span>
+                            </a>
+                            <!-- sub menu -->
+                            <div class="show-on-hover absolute left-full top-0 w-full bg-white shadow-md invisible opacity-0 group-hover:opacity-100 group-hover:visible transition duration-300 z-50 divide-y divide-gray-300 divide-dashed">
+                                <!-- single category -->
+                                <a href="#" class="px-6 py-3 flex items-center hover:bg-gray-100 transition">
+                                    <img src="images/icons/sofa.svg" class="w-5 h-5 object-contain">
+                                    <span class="ml-6 text-gray-600 text-sm">Sofa</span>
+                                </a>
+                                <div class="relative hover-active">
+                                    <!-- If sub menu -->
+                                    <span class="absolute right-2 top-3.5">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                             stroke-width="1.5" stroke="currentColor" class="w-4 h-4 text-gray-400">
+                                          <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M8.25 4.5l7.5 7.5-7.5 7.5"/>
+                                        </svg>
+                                    </span>
+                                    <!-- Menu -->
+                                    <a href="#" class="px-6 py-3 flex items-center hover:bg-gray-100 transition">
+                                        <img src="images/icons/office.svg" class="w-5 h-5 object-contain">
+                                        <span class="ml-6 text-gray-600 text-sm">Office</span>
+                                    </a>
+                                    <!-- sub menu -->
+                                    <div class="show-on-hover absolute left-full top-0 w-full bg-white shadow-md invisible opacity-0 group-hover:opacity-100 group-hover:visible transition duration-300 z-50 divide-y divide-gray-300 divide-dashed">
+                                        <!-- single category -->
+                                        <a href="#" class="px-6 py-3 flex items-center hover:bg-gray-100 transition">
+                                            <img src="images/icons/sofa.svg" class="w-5 h-5 object-contain">
+                                            <span class="ml-6 text-gray-600 text-sm">Sofa</span>
+                                        </a>
+                                        <!-- single category -->
+                                        <a href="#" class="px-6 py-3 flex items-center hover:bg-gray-100 transition">
+                                            <img src="images/icons/office.svg" class="w-5 h-5 object-contain">
+                                            <span class="ml-6 text-gray-600 text-sm">Office</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         <!-- single category end -->
                         <!-- single category -->
                         <a href="#" class="px-6 py-3 flex items-center hover:bg-gray-100 transition">
@@ -133,8 +180,8 @@
                     <div class="flex items-center space-x-6 text-base capitalize">
                         <RouterLink to="/" class="text-gray-200 hover:text-white transition">Home</RouterLink>
                         <RouterLink to="/shop" class="text-gray-200 hover:text-white transition">Shop</RouterLink>
-                        <RouterLink to="/" class="text-gray-200 hover:text-white transition">About us</RouterLink>
-                        <RouterLink to="/" class="text-gray-200 hover:text-white transition">Contact us</RouterLink>
+                        <RouterLink to="/about" class="text-gray-200 hover:text-white transition">About us</RouterLink>
+                        <RouterLink to="/contact" class="text-gray-200 hover:text-white transition">Contact us</RouterLink>
                     </div>
                     <a href="tel:1234567890" class="ml-auto justify-self-end text-gray-200 hover:text-white transition">
                         Tel &nbsp; (1-234-567-890)
