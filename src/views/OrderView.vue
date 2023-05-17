@@ -23,9 +23,11 @@ import AccountSidebar from "@/components/AccountSidebar.vue";
                         <img v-for="n in 2" class="w-[80px] h-[50px]" src="/images/products/product9.jpg" alt="product">
                     </div>
                     <div class="mt-4 md:mt-0">
-                        <a href="order-details.html"
-                           class="border border-primary text-primary text-sm font-medium px-2 sm:px-4 py-1 sm:py-2 rounded hover:bg-primary hover:text-white transition duration-300">View
-                            Order</a>
+                        <RouterLink
+                                to="/order-details"
+                                class="border border-primary text-primary text-sm font-medium px-2 sm:px-4 py-1 sm:py-2 rounded hover:bg-primary hover:text-white transition duration-300">
+                            View Order
+                        </RouterLink>
                     </div>
                 </div>
                 <div class="flex flex-wrap gap-5 justify-between items-center mt-6">
@@ -60,9 +62,10 @@ import AccountSidebar from "@/components/AccountSidebar.vue";
                              alt="product">
                     </div>
                     <div class="mt-4 md:mt-0">
-                        <a href="order-details.html"
-                           class="border border-primary text-primary text-sm font-medium px-2 sm:px-4 py-1 sm:py-2 rounded hover:bg-primary hover:text-white transition duration-300">View
-                            Order</a>
+                        <RouterLink to="/order-details"
+                                    class="border border-primary text-primary text-sm font-medium px-2 sm:px-4 py-1 sm:py-2 rounded hover:bg-primary hover:text-white transition duration-300">
+                            View Order
+                        </RouterLink>
                     </div>
                 </div>
                 <div class="flex flex-wrap gap-5 justify-between items-center mt-6">
