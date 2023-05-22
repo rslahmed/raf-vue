@@ -6,6 +6,7 @@ import "swiper/css/navigation";
 import {Autoplay, Navigation, Pagination} from "swiper";
 
 const modules = [Pagination, Autoplay, Navigation]
+  
 </script>
 
 <template>
@@ -20,7 +21,13 @@ const modules = [Pagination, Autoplay, Navigation]
                 :navigation="true"
                 :slidesPerView="6"
                 :spaceBetween="30"
+                :breakpoints="{
+                    320: {slidesPerView: 2},
+                    620: {slidesPerView: 3},
+                    1024: {slidesPerView: 6}
+                }"
                 class="mySwiper"
+               
             >
                 <SwiperSlide v-for="n in 8" :key="n">
                     <a href="#"

@@ -7,10 +7,10 @@ import Footer from "@/components/Footer.vue";
 <template>
     <Header/>
   <!-- About banner -->
-    <div class="bg-cover bg-center bg-no-repeat h-[350px]"
+    <div class="bg-cover bg-center bg-no-repeat"
          style="background-image: url('/images/contact-banner.jpg')">
-        <div class="container mx-auto py-36">
-            <h1 class="text-center text-3xl uppercase text-white mb-1">Contact us</h1>
+        <div class="container mx-auto py-16 sm:py-36">
+            <h1 class="text-center text-3xl uppercase text-white mb-1">About Us</h1>
             <div class="flex justify-center items-center">
                 <RouterLink to="/" class="text-primary">
                     <svg width="17" height="17" viewBox="0 0 32 32">
@@ -22,19 +22,19 @@ import Footer from "@/components/Footer.vue";
                     <svg width="22" height="22" viewBox="0 0 24 24">
                         <path fill="currentColor" d="M10 6L8.59 7.41L13.17 12l-4.58 4.59L10 18l6-6l-6-6z"></path></svg>
                 </span>
-                <RouterLink to="/contact" class="text-white">contact us</RouterLink>
+                <RouterLink to="/contact" class="text-white">About Us</RouterLink>
             </div>
         </div>
     </div>
 
   <!-- History -->
     <div class="about_history section_padding">
-        <div class="container py-14">
+        <div class="container py-8 sm:py-14">
             <div class="grid grid-cols-12 gap-6">
                 <div class="col-span-12 lg:col-span-6 self-center">
                     <div>
                         <h2 class="text-sm text-primary font-bold mb-2">OUR HISTORY</h2>
-                        <h3 class="text-2xl lg:text-3xl uppercase mb-3">Creative and New fashion <br
+                        <h3 class="text-lg sm:text-2xl lg:text-3xl uppercase mb-3">Creative and New fashion <br
                                 class="d-none d-xl-block"> trends
                             collection</h3>
                         <p class="mb-4">
@@ -68,7 +68,7 @@ import Footer from "@/components/Footer.vue";
     </div>
 
   <!-- Partners -->
-    <div class="container pb-14 pt-14">
+    <div class="container py-12 sm:py-16">
         <h2 class="text-2xl uppercase mb-3 text-center text-gray-600 font-bold">OUR PARTNERS</h2>
         <!-- swiper -->
         <div class="grid grid-cols-6">

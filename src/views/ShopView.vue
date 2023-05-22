@@ -16,10 +16,10 @@ import Breadcrumbs from "@/components/Breadcrumbs.vue";
         <!-- products -->
         <div>
             <!-- sorting -->
-            <div class="mb-4 flex justify-between items-center">
+            <div class="mb-4 sm:flex justify-between items-center">
                 <h3 class="text-3xl text-gray-600">Let's Shop</h3>
                 <select
-                        class="w-44 text-sm text-gray-600 px-4 py-3 border-gray-300 shadow-sm rounded focus:ring-primary focus:border-primary">
+                        class="w-44 text-sm text-gray-600 px-4 py-3 border-gray-300 shadow-sm rounded focus:ring-primary focus:border-primary mt-3 sm:mt-0">
                     <option>Default sorting</option>
                     <option>Price low-high</option>
                     <option>Price high-low</option>

@@ -23,10 +23,10 @@ const modules = [Pagination, Autoplay, Navigation]
             class="mySwiper"
         >
             <SwiperSlide v-for="n in 3" :key="n">
-                <div class="bg-cover bg-no-repeat bg-center py-36 relative" style="background-image: url('/images/banner-bg.jpg')">
+                <div class="bg-cover bg-no-repeat bg-center py-16 md:py-36 relative" style="background-image: url('/images/banner-bg.jpg')">
                     <div class="container">
                         <!-- banner content -->
-                        <h1 class="xl:text-6xl md:text-5xl text-4xl text-gray-800 font-medium mb-4">
+                        <h1 class="xl:text-6xl md:text-5xl text-3xl text-gray-800 font-medium mb-4">
                             Best Collection For <br class="hidden sm:block"> Home Decoration
                         </h1>
                         <p class="text-base text-gray-600 leading-6">

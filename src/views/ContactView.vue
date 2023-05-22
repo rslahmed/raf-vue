@@ -8,9 +8,9 @@ import Header from "@/components/Header.vue";
     <Header/>
 
   <!-- Contact banner -->
-    <div class="bg-cover bg-center bg-no-repeat h-[350px]"
+    <div class="bg-cover bg-center bg-no-repeat"
          style="background-image: url('/images/contact-banner.jpg')">
-        <div class="container mx-auto py-36">
+        <div class="container mx-auto py-16 md:py-36">
             <h1 class="text-center text-3xl uppercase text-white mb-1">Contact us</h1>
             <div class="flex justify-center items-center">
                 <RouterLink to="/" class="text-primary">
@@ -76,7 +76,7 @@ import Header from "@/components/Header.vue";
                             </div>
                         </div>
                         <div class="col-span-12 mt-4">
-                            <button type="submit" class="default_btn xs_btn rounded px-4">send message</button>
+                            <button type="submit" class="bg-primary hover:bg-primary/90 text-lg text-white rounded px-4 py-2">send message</button>
                         </div>
 
                     </div>
