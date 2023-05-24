@@ -1,29 +1,30 @@
 <script setup>
-import Banner from "@/components/Banner.vue";
-import Categories from "@/components/Categories.vue";
-import Header from "@/components/Header.vue";
-import Features from "@/components/Features.vue";
-import NewArrivals from "@/components/NewArrivals.vue";
-import Recomended from "@/components/Recomended.vue";
-import AdSection from "@/components/AdSection.vue";
-import Footer from "@/components/Footer.vue";
+    import Banner from "@/components/Banner.vue";
+    import Categories from "@/components/Categories.vue";
+    import Header from "@/components/Header.vue";
+    import Features from "@/components/Features.vue";
+    import NewArrivals from "@/components/NewArrivals.vue";
+    import Recomended from "@/components/Recomended.vue";
+    import AdSection from "@/components/AdSection.vue";
+    import Footer from "@/components/Footer.vue";
+import { RouterLink } from "vue-router";
 </script>
 
 <template>
-    <Header/>
+    <Header />
 
-    <Banner/>
+    <Banner />
 
-    <Features/>
+    <Features />
 
-    <Categories/>
+    <Categories />
 
-    <NewArrivals/>
+    <NewArrivals />
 
-    <AdSection/>
+    <AdSection />
 
-    <Recomended/>
+    <Recomended />
 
-    <Footer/>
+    <Footer />
 
 </template>
