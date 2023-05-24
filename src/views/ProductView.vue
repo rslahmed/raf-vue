@@ -17,6 +17,7 @@ import {
 
 import "swiper/css";
 import "swiper/css/navigation";
+import RelatedProducts from "@/components/RelatedProducts.vue";
 
 const modules = [Navigation];
 
@@ -116,89 +117,6 @@ const ratingForm = reactive({
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi
                 labore blanditiis
             </p>
-            <!-- size -->
-            <div class="mt-4">
-                <h3 class="text-base text-gray-800 mb-1">Size</h3>
-                <div class="flex items-center gap-2">
-                    <!-- single size -->
-                    <div class="size-selector">
-                        <input type="radio" name="size" class="hidden" id="size-xs">
-                        <label for="size-xs"
-                               class="text-xs border border-gray-200 rounded-sm h-6 w-6 flex items-center justify-center cursor-pointer shadow-sm text-gray-600">
-                            XS
-                        </label>
-                    </div>
-                    <!-- single size end -->
-                    <!-- single size -->
-                    <div class="size-selector">
-                        <input type="radio" name="size" class="hidden" id="size-s">
-                        <label for="size-s"
-                               class="text-xs border border-gray-200 rounded-sm h-6 w-6 flex items-center justify-center cursor-pointer shadow-sm text-gray-600">
-                            S
-                        </label>
-                    </div>
-                    <!-- single size end -->
-                    <!-- single size -->
-                    <div class="size-selector">
-                        <input type="radio" name="size" class="hidden" id="size-m" checked>
-                        <label for="size-m"
-                               class="text-xs border border-gray-200 rounded-sm h-6 w-6 flex items-center justify-center cursor-pointer shadow-sm text-gray-600">
-                            M
-                        </label>
-                    </div>
-                    <!-- single size end -->
-                    <!-- single size -->
-                    <div class="size-selector">
-                        <input type="radio" name="size" class="hidden" id="size-l">
-                        <label for="size-l"
-                               class="text-xs border border-gray-200 rounded-sm h-6 w-6 flex items-center justify-center cursor-pointer shadow-sm text-gray-600">
-                            L
-                        </label>
-                    </div>
-                    <!-- single size end -->
-                    <!-- single size -->
-                    <div class="size-selector">
-                        <input type="radio" name="size" class="hidden" id="size-xl">
-                        <label for="size-xl"
-                               class="text-xs border border-gray-200 rounded-sm h-6 w-6 flex items-center justify-center cursor-pointer shadow-sm text-gray-600">
-                            XL
-                        </label>
-                    </div>
-                    <!-- single size end -->
-                </div>
-            </div>
-            <!-- size end -->
-            <!-- color -->
-            <div class="mt-4">
-                <h3 class="text-base text-gray-800 mb-1">Color</h3>
-                <div class="flex items-center gap-2">
-                    <!-- single color -->
-                    <div class="color-selector">
-                        <input type="radio" name="color" class="hidden" id="color-red" checked>
-                        <label for="color-red" style="background-color : #fc3d57"
-                               class="text-xs border border-gray-200 rounded-sm h-5 w-5 flex items-center justify-center cursor-pointer shadow-sm">
-                        </label>
-                    </div>
-                    <!-- single color end -->
-                    <!-- single color -->
-                    <div class="color-selector">
-                        <input type="radio" name="color" class="hidden" id="color-white">
-                        <label for="color-white" style="background-color : #fff"
-                               class="text-xs border border-gray-200 rounded-sm h-5 w-5 flex items-center justify-center cursor-pointer shadow-sm">
-                        </label>
-                    </div>
-                    <!-- single color end -->
-                    <!-- single color -->
-                    <div class="color-selector">
-                        <input type="radio" name="color" class="hidden" id="color-black">
-                        <label for="color-black" style="background-color : #000"
-                               class="text-xs border border-gray-200 rounded-sm h-5 w-5 flex items-center justify-center cursor-pointer shadow-sm">
-                        </label>
-                    </div>
-                    <!-- single color end -->
-                </div>
-            </div>
-            <!-- color end -->
             <!-- quantity -->
             <div class="mt-4">
                 <h3 class="text-base text-gray-800 mb-1">Quantity</h3>
@@ -210,7 +128,7 @@ const ratingForm = reactive({
             </div>
             <!-- color end -->
             <!-- add to cart button -->
-            <div class="flex gap-3 border-b border-gray-200 pb-5 mt-6">
+            <div class="flex gap-3 mt-6">
                 <a href="#" class="bg-primary border border-primary text-white px-3 sm:px-8 py-2 font-medium rounded uppercase
                     hover:bg-transparent hover:text-primary transition text-sm flex items-center">
                     <span class="mr-2"><i class="fas fa-shopping-bag"></i></span> Add to cart
@@ -222,7 +140,7 @@ const ratingForm = reactive({
             </div>
             <!-- add to cart button end -->
             <!-- product share icons -->
-            <div class="flex space-x-3 mt-4">
+            <div class="flex space-x-3 mt-8 pt-6 border-t border-gray-200">
                 <a href="#"
                    class="text-gray-400 hover:text-gray-500 h-8 w-8 rounded-full border border-gray-300 flex items-center justify-center">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 512 512">
@@ -253,7 +171,7 @@ const ratingForm = reactive({
         <!-- product content end -->
     </div>
   <!-- product info & review btn -->
-    <div class="container">
+    <div class="container mt-16">
         <div class="flex gap-2 border-b border-gray-200">
             <div :class="{'block text-primary border-primary': tabIndex === 'info'}" @click="tabIndex = 'info'"
                  class="border px-1 sm:px-4 py-2 rounded text-xs sm:text-base cursor-pointer border-gray-200 rounded-b-none border-b-0">
@@ -365,20 +283,11 @@ const ratingForm = reactive({
                 </div>
             </div>
         </div>
-
-
     </div>
   <!-- review details -->
 
   <!-- related products -->
-    <div class="container py-8 lg:mt-12">
-        <h2 class="text-2xl md:text-3xl font-medium text-gray-800 uppercase mb-6">related products</h2>
-        <!-- product wrapper -->
-        <div class="grid lg:grid-cols-4 sm:grid-cols-2 gap-6">
-            <ProductCard/>
-        </div>
-        <!-- product wrapper end -->
-    </div>
+    <RelatedProducts/>
   <!-- related products end -->
 
     <Footer/>
