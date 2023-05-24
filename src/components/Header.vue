@@ -50,8 +50,7 @@ const showMobileMenu = ref(false)
                     </div>
                     <div class="text-xs leading-3 lg:block hidden">Cart</div>
                 </RouterLink>
-                <RouterLink to="/account"
-                            class="flex flex-col items-center justify-center text-center text-gray-700 hover:text-primary transition">
+                <div class="flex flex-col items-center justify-center text-center text-gray-700 hover:text-primary transition relative py-1 group">
                     <div class="text-2xl">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                              stroke="currentColor" class="w-6 h-6">
@@ -60,8 +59,23 @@ const showMobileMenu = ref(false)
                         </svg>
                     </div>
                     <div class="text-xs leading-3 lg:block hidden">Account</div>
-                </RouterLink>
-                <button @click="showMobileMenu = !showMobileMenu" class="lg:hidden relative text-gray-500 hover:text-primary transition">
+
+                    <!-- Sub menu -->
+                    <div class="absolute top-full right-0 bg-white w-40 rounded-md border border-gray-200 shadow py-1 text-left hidden group-hover:block z-20">
+                        <RouterLink to="/account" class="block w-full px-4 py-2 text-gray-700 hover:bg-gray-100 transition">
+                            My Account
+                        </RouterLink>
+                        <RouterLink to="/orders" class="block w-full px-4 py-2 text-gray-700 hover:bg-gray-100 transition">
+                            My Order
+                        </RouterLink>
+                        <RouterLink to="/" class="block w-full px-4 py-2 text-gray-700 hover:bg-gray-100 transition">
+                            Logout
+                        </RouterLink>
+                    </div>
+                </div>
+<!--                <button class="primary-btn">Login</button>-->
+                <button @click="showMobileMenu = !showMobileMenu"
+                        class="lg:hidden relative text-gray-500 hover:text-primary transition">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                          stroke="currentColor" class="w-7 h-7">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -200,8 +214,10 @@ const showMobileMenu = ref(false)
   <!-- navbar end -->
 
   <!-- Mobile menu -->
-    <div :class="{'!opacity-100 !visible' : showMobileMenu}" class="fixed inset-0 z-50 bg-black/50 transition-all opacity-0 invisible">
-        <div :class="{'!left-0' : showMobileMenu}" class="absolute -left-80 top-0 h-full overflow-auto w-80 bg-white z-50 transition-all">
+    <div :class="{'!opacity-100 !visible' : showMobileMenu}"
+         class="fixed inset-0 z-50 bg-black/50 transition-all opacity-0 invisible">
+        <div :class="{'!left-0' : showMobileMenu}"
+             class="absolute -left-80 top-0 h-full overflow-auto w-80 bg-white z-50 transition-all">
             <!-- Menu title -->
             <div class="flex justify-between py-2 px-4 bg-primary">
                 <h4 class="text-xl text-white">Menu</h4>
