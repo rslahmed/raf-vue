@@ -114,25 +114,30 @@ const ratingForm = reactive({
                 <span class="text-gray-500 text-base line-through">$500.00</span>
             </div>
             <p class="mt-4 text-gray-600">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem quaerat excepturi
-                labore blanditiis
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem
+                quaerat excepturi labore blanditiis
             </p>
-            <!-- quantity -->
-            <div class="mt-4">
-                <h3 class="text-base text-gray-800 mb-1">Quantity</h3>
-                <div class="flex border border-gray-300 text-gray-600 divide-x divide-gray-300 w-max">
-                    <div class="h-8 w-8 text-xl flex items-center justify-center cursor-pointer select-none">-</div>
-                    <div class="h-8 w-10 flex items-center justify-center">4</div>
-                    <div class="h-8 w-8 text-xl flex items-center justify-center cursor-pointer select-none">+</div>
-                </div>
-            </div>
-            <!-- color end -->
             <!-- add to cart button -->
             <div class="flex gap-3 mt-6">
-                <a href="#" class="bg-primary border border-primary text-white px-3 sm:px-8 py-2 font-medium rounded uppercase
+                <a v-if="false" href="#" class="bg-primary border border-primary text-white px-3 sm:px-8 py-2 font-medium rounded uppercase
                     hover:bg-transparent hover:text-primary transition text-sm flex items-center">
                     <span class="mr-2"><i class="fas fa-shopping-bag"></i></span> Add to cart
                 </a>
+                <div class="flex items-center w-max py-1 text-center text-white bg-primary border border-primary rounded hover:bg-transparent hover:text-primary transition">
+                    <button class="px-2 hover:scale-125 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                             stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15"/>
+                        </svg>
+                    </button>
+                    <div class="flex-grow px-4">1 In Cart</div>
+                    <button class="px-2 hover:scale-125 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                             stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/>
+                        </svg>
+                    </button>
+                </div>
                 <a href="#" class="border border-gray-300 text-gray-600 px-8 py-2 font-medium rounded uppercase
                     hover:bg-transparent hover:text-primary transition text-sm">
                     <span class="mr-2"><i class="far fa-heart"></i></span> Wishlist

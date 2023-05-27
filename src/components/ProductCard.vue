@@ -7,11 +7,11 @@
     <div class="group rounded bg-white shadow overflow-hidden">
         <!-- product image -->
         <div class="relative">
-            <img src="images/products/product9.jpg" class="w-full">
+            <img src="/images/products/product9.jpg" class="w-full">
             <div
                     class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition">
                 <RouterLink to="/view"
-                   class="text-white text-lg w-9 h-9 rounded-full bg-primary hover:bg-gray-800 transition flex items-center justify-center">
+                            class="text-white text-lg w-9 h-9 rounded-full bg-primary hover:bg-gray-800 transition flex items-center justify-center">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                          stroke="currentColor" class="w-5 h-5">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -19,7 +19,7 @@
                     </svg>
                 </RouterLink>
                 <RouterLink to="/cart"
-                   class="text-white text-lg w-9 h-9 rounded-full bg-primary hover:bg-gray-800 transition flex items-center justify-center">
+                            class="text-white text-lg w-9 h-9 rounded-full bg-primary hover:bg-gray-800 transition flex items-center justify-center">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                          stroke="currentColor" class="w-5 h-5">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -54,10 +54,26 @@
         </div>
         <!-- product content end -->
         <!-- product button -->
-        <RouterLink to="/cart"
-           class="block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">
-            Add to Cart
-        </RouterLink>
+        <!--        <RouterLink to="/cart"-->
+        <!--                    class="block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">-->
+        <!--            Add to Cart-->
+        <!--        </RouterLink>-->
+
+        <div class="flex items-center w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition">
+            <button class="px-2 hover:scale-125 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                     stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15"/>
+                </svg>
+            </button>
+            <div class="flex-grow">1 In Cart</div>
+            <button class="px-2 hover:scale-125 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                     stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/>
+                </svg>
+            </button>
+        </div>
         <!-- product button end -->
     </div>
 </template>
